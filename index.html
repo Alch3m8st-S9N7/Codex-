@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chat Resume Launcher</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>AI Chat Resume Launcher</h1>
+      <p>
+        Save the last conversation URL for each AI provider and reopen it instantly.
+      </p>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="Actions">
+        <button id="add-provider" type="button">Add Provider</button>
+        <button id="export-data" type="button">Export Data</button>
+        <label class="import-label" for="import-file">Import Data</label>
+        <input id="import-file" type="file" accept="application/json" />
+      </section>
+
+      <section>
+        <h2>Providers</h2>
+        <div id="providers" class="providers"></div>
+      </section>
+
+      <section class="tips">
+        <h2>How to use</h2>
+        <ol>
+          <li>Open your AI chat in another tab and copy its URL.</li>
+          <li>Paste it into the provider card and click <em>Save URL</em>.</li>
+          <li>Later, click <em>Open Last Chat</em> to jump back in instantly.</li>
+        </ol>
+      </section>
+    </main>
+
+    <template id="provider-template">
+      <article class="provider-card">
+        <div class="provider-header">
+          <input class="provider-name" type="text" aria-label="Provider name" />
+          <button class="delete-provider" type="button">Delete</button>
+        </div>
+
+        <label>
+          Home URL
+          <input class="home-url" type="url" placeholder="https://chat.openai.com/" />
+        </label>
+
+        <label>
+          Last chat URL
+          <input class="last-url" type="url" placeholder="https://..." />
+        </label>
+
+        <div class="provider-actions">
+          <button class="save-provider" type="button">Save URL</button>
+          <button class="open-last" type="button">Open Last Chat</button>
+          <button class="open-home" type="button">Open Home</button>
+        </div>
+
+        <p class="status" role="status" aria-live="polite"></p>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

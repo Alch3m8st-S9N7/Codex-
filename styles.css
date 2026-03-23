@@ -1,0 +1,96 @@
+:root {
+  color-scheme: light dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.45;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem 2rem;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.page-header {
+  margin: 2rem 0 1rem;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.import-label,
+button {
+  border: 1px solid #6664;
+  border-radius: 0.6rem;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  background: #0000;
+  color: inherit;
+}
+
+#import-file {
+  display: none;
+}
+
+.providers {
+  display: grid;
+  gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.provider-card {
+  border: 1px solid #6664;
+  border-radius: 0.7rem;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.provider-header {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.provider-name {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+input[type='text'],
+input[type='url'] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #6666;
+  border-radius: 0.5rem;
+  padding: 0.45rem;
+  background: #0000;
+  color: inherit;
+}
+
+.provider-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.status {
+  min-height: 1.2em;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #2c8a3f;
+}
+
+.tips {
+  margin-top: 1.8rem;
+}
